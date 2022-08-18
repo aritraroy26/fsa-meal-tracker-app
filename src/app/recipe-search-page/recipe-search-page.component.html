@@ -1,0 +1,19 @@
+<div class="page">
+  <app-back-button></app-back-button>
+  <div class="centered-container">
+    <h1>Add Meal to Plan</h1>
+    <input
+      type="text"
+      class="space-before space-after full-width"
+      placeholder="Enter keyword"
+      [(ngModel)]="searchInputValue"
+    />
+    <button class="full-width space-after" (click)="onSearchClicked()">
+      Search
+    </button>
+    <app-recipe-search-results-list
+      [recipes]="searchResults"
+      [ingredients]="ingredients"
+    ></app-recipe-search-results-list>
+  </div>
+</div>

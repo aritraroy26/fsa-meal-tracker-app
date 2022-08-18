@@ -1,0 +1,26 @@
+<div class="page">
+  <app-back-button></app-back-button>
+  <div class="centered-container">
+    <h1>Add Ingredient</h1>
+    <input
+      type="text"
+      placeholder="Enter ingredient name"
+      class="space-after space-before full-width"
+      [(ngModel)]="name"
+    />
+    <input
+      type="number"
+      placeholder="Enter amount"
+      class="space-before full-width"
+      [(ngModel)]="amount"
+    />
+    <select [(ngModel)]="units" class="space-before full-width">
+      <option *ngFor="let option of unitOptions" [value]="option">
+        {{ option }}
+      </option>
+    </select>
+    <button class="space-before full-width" (click)="addToIngredients()">
+      Add
+    </button>
+  </div>
+</div>
